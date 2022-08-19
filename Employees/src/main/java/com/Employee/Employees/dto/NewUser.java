@@ -1,19 +1,9 @@
-package com.Employee.Employees.models;
+package com.Employee.Employees.dto;
 
-import javax.persistence.*;
+public class NewUser {
 
-@Entity
-@Table(name = "tb_User")
-public class User{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false)
     private String nome;
-    @Column(nullable = false)
     private int idade;
-    @Column(nullable = false)
     private String cep;
     private String sexo;
     private String endereco;
@@ -21,29 +11,12 @@ public class User{
     private String cidade;
     private String estado;
 
-    public User() {
-    }
-
-    public User(String nome, int idade, String cep) {
-        this.nome = nome;
-        this.idade = idade;
-        this.cep = cep;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
+    public String getNome() {
         return nome;
     }
 
-    public void setName(String name) {
-        this.nome = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getIdade() {
@@ -102,4 +75,17 @@ public class User{
         this.estado = estado;
     }
 
+    @Override
+    public String toString() {
+        return "NewUser{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", cep='" + cep + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }
