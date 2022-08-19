@@ -27,7 +27,7 @@ This project was spring Boot, Data.
 
 This project was JAVA 17
 
-### `npm start`
+### `Run Application`
 
 Runs the app in the development mode.\
 Open [http://localhost:8080/index](http://localhost:8080/index) and  [http://localhost:8080/register](http://localhost:8080/register) to view it in your browser.
